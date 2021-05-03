@@ -60,7 +60,10 @@ while True:
     cv2.imshow("Rokas", frame)
     # it is waiting for the key to press to go to the next layer
     # without waitkey you cannot display anything
-    cv2.waitKey(1)
+    key = cv2.waitKey(1)
+
+    if key == 81 or key == 113:
+        break
 
 # key = cv2.waitKey(1)
 
