@@ -65,6 +65,10 @@ while True:
     if key == 81 or key == 113:
         break
 
+    #     release video capture
+
+webcam.release()
+
 # key = cv2.waitKey(1)
 
 
