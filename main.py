@@ -52,11 +52,17 @@ while True:
     # converting to grayscale
     grayscaled_img = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
-    cv2.imshow("Rokas", grayscaled_img)
+    face_coordinates = trained_face_data.detectMultiScale(grayscaled_img)
+
+    for (x, y, w, h) in face_coordinates:
+        cv2.rectangle(frame, (x, y), (x + w, y + h), (randrange(128, 256), randrange(256), randrange(256)), 2)
+
+    cv2.imshow("Rokas", frame)
+    # it is waiting for the key to press to go to the next layer
+    # without waitkey you cannot display anything
     cv2.waitKey(1)
 
 # key = cv2.waitKey(1)
-
 
 
 # print("WORKING!")
