@@ -37,7 +37,7 @@ from random import randrange
 #
 # print("WORKING!")
 
-
+# haarcascasde is the chain of going per many faces, until it finds the almost the same one!
 trained_face_data = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 # capturing the video from webcam, the default camera 0 is
 # 0 is default camera
